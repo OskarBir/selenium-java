@@ -1,9 +1,8 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
@@ -53,7 +52,6 @@ public class ChromeCRUDTest {
         Select state = new Select(driver.findElement(By.id("address_state")));
         WebElement zipcode = driver.findElement(By.id("address_zip_code"));
         WebElement countryUs = driver.findElement(By.id("address_country_us"));
-        WebElement countryCanada = driver.findElement(By.id("address_country_canada"));
         WebElement birthday = driver.findElement(By.id("address_birthday"));
         WebElement age = driver.findElement(By.id("address_age"));
         WebElement website = driver.findElement(By.id("address_website"));
@@ -153,6 +151,166 @@ public class ChromeCRUDTest {
         saveButton.click();
         assertFalse(driver.getPageSource().contains("Zip code can't be blank"));
 
+    }
+
+    @Test
+    public void AddCorrectStateTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        Select state = new Select(driver.findElement(By.id("address_state")));
+        state.selectByVisibleText("Hawaii");
+        saveButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='state']"));
+        assertEquals("HI", field.getText());
+
+    }
+
+    @Test
+    public void EditStateTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        Select state = new Select(driver.findElement(By.id("address_state")));
+        state.selectByVisibleText("Hawaii");
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='edit']")).click();
+        Select editState = new Select(driver.findElement(By.id("address_state")));
+        editState.selectByVisibleText("Ohio");
+        WebElement updateButton = driver.findElement(By.name("commit"));
+        updateButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='state']"));
+        assertEquals("OH", field.getText());
+
+    }
+
+    @Test
+    public void AddCorrectCountryTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement countryUs = driver.findElement(By.id("address_country_us"));
+        WebElement countryCa = driver.findElement(By.id("address_country_canada"));
+        countryUs.click();
+        countryCa.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='country']"));
+        assertEquals("canada", field.getText());
+
+    }
+
+    @Test
+    public void EditCountryTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement countryCa = driver.findElement(By.id("address_country_canada"));
+        countryCa.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='edit']")).click();
+        WebElement countryUs = driver.findElement(By.id("address_country_us"));
+        countryUs.click();
+        WebElement updateButton = driver.findElement(By.name("commit"));
+        updateButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='country']"));
+        assertEquals("us", field.getText());
+    }
+
+    @Test
+    public void AddColorTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        JavascriptExecutor jse=(JavascriptExecutor)driver;
+        jse.executeScript("document.getElementById('address_color').value='#19d826'");
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='color']"));
+        assertEquals(Color.fromString("#19d826").asRgba(), field.getCssValue("background-color"));
+    }
+
+    @Test
+    public void AddCorrectWebsiteTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement website = driver.findElement(By.id("address_website"));
+        website.sendKeys("http://wykop.pl");
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='website']"));
+        assertEquals("http://wykop.pl", field.getText());
+    }
+
+    @Test
+    public void EditWebsiteTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement website = driver.findElement(By.id("address_website"));
+        website.sendKeys("http://wykop.pl");
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='edit']")).click();
+        WebElement website2 = driver.findElement(By.id("address_website"));
+        website2.clear();
+        website2.sendKeys("http://wp.pl");
+        WebElement updateButton = driver.findElement(By.name("commit"));
+        updateButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='website']"));
+        assertEquals("http://wp.pl", field.getText());
+    }
+
+    @Test
+    public void WrongWebsiteTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement website = driver.findElement(By.id("address_website"));
+        website.sendKeys("nielink");
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        assertEquals("Wprowadź adres URL.", website.getAttribute("validationMessage"));
+    }
+
+
+    @Test
+    public void AddClimbingTest(){
+
+    }
+
+    @Test
+    public void EditClimbingTest(){
+
+    }
+
+    @Test
+    public void AddDancingTest(){
+
+    }
+
+    @Test
+    public void EditDancingTest(){
+
+    }
+
+    @Test
+    public void AddReadingTest(){
+
+    }
+
+    @Test
+    public void EditReadingTest(){
+
+    }
+
+    public static void CreateBasicAddress(){
+        WebElement firstName = driver.findElement(By.id("address_first_name"));
+        WebElement lastName = driver.findElement(By.id("address_last_name"));
+        WebElement address = driver.findElement(By.id("address_street_address"));
+        WebElement city = driver.findElement(By.id("address_city"));
+        WebElement zipcode = driver.findElement(By.id("address_zip_code"));
+        firstName.sendKeys("Imię");
+        lastName.sendKeys("Nazwisko");
+        address.sendKeys("Adres");
+        city.sendKeys("Miasto");
+        zipcode.sendKeys("kodpocztowy");
     }
 
     @AfterEach
