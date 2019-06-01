@@ -3,10 +3,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -178,6 +175,36 @@ public class ChromeLoginTest
         passwordTextBoxLogin.sendKeys("qwerty");
         saveButtonLogin.click();
         assertTrue(driver.getPageSource().contains("**Failed Login**"));
+    }
+
+    @Test
+    public void SearchOneResultOnGoogleTest()
+    {
+        driver.get("http://google.com");
+        WebElement searchbar = driver.findElement(By.name("q"));
+        searchbar.sendKeys("inurl:What-Google-searches-only-give-one-result-at-the-time-of-writing-your-answer");
+        searchbar.sendKeys(Keys.RETURN);
+        assertTrue(driver.getPageSource().contains("This question a superset of the sport called Googlewhacking. Ironically, the moment you post the words or phrase that form a single Google"));
+    }
+
+    @Test
+    public void SearchTwoResultOnGoogleTest()
+    {
+        driver.get("http://google.com");
+        WebElement searchbar = driver.findElement(By.name("q"));
+        searchbar.sendKeys("BCICNSFD");
+        searchbar.sendKeys(Keys.RETURN);
+        assertTrue(driver.getPageSource().contains("Około 2 wyników"));
+    }
+
+    @Test
+    public void SearchNotFoundResultOnGoogleTest()
+    {
+        driver.get("http://google.com");
+        WebElement searchbar = driver.findElement(By.name("q"));
+        searchbar.sendKeys("enfoenpfonseofsofnsoenfsoenfsoenfsoenf");
+        searchbar.sendKeys(Keys.RETURN);
+        assertTrue(driver.getPageSource().contains("Podana fraza - <em>enfoenpfonseofsofnsoenfsoenfsoenfsoenf</em> - nie została odnaleziona."));
     }
 
     @AfterAll
