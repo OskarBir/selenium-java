@@ -272,33 +272,129 @@ public class ChromeCRUDTest {
 
     @Test
     public void AddClimbingTest(){
-
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement interestClimb = driver.findElement(By.id("address_interest_climb"));
+        interestClimb.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='interest_climb']"));
+        assertEquals("Yes", field.getText());
     }
 
     @Test
     public void EditClimbingTest(){
-
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement interestClimb = driver.findElement(By.id("address_interest_climb"));
+        interestClimb.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='edit']")).click();
+        WebElement interestClimb2 = driver.findElement(By.id("address_interest_climb"));
+        interestClimb2.click();
+        WebElement updateButton = driver.findElement(By.name("commit"));
+        updateButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='interest_climb']"));
+        assertEquals("No", field.getText());
     }
 
     @Test
     public void AddDancingTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement interestDance = driver.findElement(By.id("address_interest_dance"));
+        interestDance.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='interest_dance']"));
+        assertEquals("Yes", field.getText());
 
     }
 
     @Test
     public void EditDancingTest(){
-
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement interestDance = driver.findElement(By.id("address_interest_dance"));
+        interestDance.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='edit']")).click();
+        WebElement interestDance2 = driver.findElement(By.id("address_interest_dance"));
+        interestDance2.click();
+        WebElement updateButton = driver.findElement(By.name("commit"));
+        updateButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='interest_dance']"));
+        assertEquals("No", field.getText());
     }
 
     @Test
     public void AddReadingTest(){
-
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement interestRead= driver.findElement(By.id("address_interest_read"));
+        interestRead.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='interest_read']"));
+        assertEquals("Yes", field.getText());
     }
 
     @Test
     public void EditReadingTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement interestRead= driver.findElement(By.id("address_interest_read"));
+        interestRead.click();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='edit']")).click();
+        WebElement interestRead2 = driver.findElement(By.id("address_interest_read"));
+        interestRead2.click();
+        WebElement updateButton = driver.findElement(By.name("commit"));
+        updateButton.click();
+        WebElement field = driver.findElement(By.xpath("//span[@data-test='interest_read']"));
+        assertEquals("No", field.getText());
+    }
+
+    @Test
+    public void DeleteAddressTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='list']")).click();
+        driver.findElement(By.xpath("//a[contains(text(), 'Destroy')][1]")).click();
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+        assertTrue(driver.getPageSource().contains("Address was successfully destroyed."));
 
     }
+
+    @Test
+    public void CancelDeleteAddressTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        CreateBasicAddress();
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        driver.findElement(By.xpath("//a[@data-test='list']")).click();
+        driver.findElement(By.xpath("//a[contains(text(), 'Destroy')][1]")).click();
+        Alert alert = driver.switchTo().alert();
+        alert.dismiss();
+        assertFalse(driver.getPageSource().contains("Address was successfully destroyed."));
+    }
+
+//    @Test
+//    public void AddPicTest(){
+//        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+//        CreateBasicAddress();
+//        WebElement addPic = driver.findElement(By.id("address_picture"));
+//        addPic.sendKeys("C:\\Users\\Oskar\\Desktop\\projekt3-OskarBir\\zdj.jpg");
+//        WebElement saveButton = driver.findElement(By.name("commit"));
+//        saveButton.click();
+//        assertTrue(driver.getPageSource().contains("Address was successfully created."));
+//    }
 
     public static void CreateBasicAddress(){
         WebElement firstName = driver.findElement(By.id("address_first_name"));

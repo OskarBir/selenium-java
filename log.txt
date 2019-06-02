@@ -1,18 +1,149 @@
-1559465477293	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Oskar\\AppData\\Local\\Temp\\rust_mozprofile.y1xEjOtGveiZ"
-1559465478000	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1559465478001	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1559465478001	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-1559465480622	Marionette	INFO	Listening on port 1597
-1559465481111	Marionette	WARN	TLS certificate errors will be ignored for this session
-[Parent 14080, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Parent 14080, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 2428, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 10572, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 10572, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Parent 14080, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 10552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 10552, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-1559465488109	Marionette	INFO	Stopped listening on port 1597
-[GPU 6120, Chrome
-###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+1559473701856	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "--headless" "–lang=en" "-foreground" "-no-remote" "-profile" "C:\\Users\\Oskar\\AppData\\Local\\Temp\\rust_mozprofile.GlunOvGMcjGz"
+*** You are running in headless mode.
+1559473702986	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1559473702986	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1559473702986	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1559473705461	Marionette	INFO	Listening on port 11157
+1559473705673	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221559433603642%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
 
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+JavaScript error: http://a.testaddressbook.com/assets/application-8c3a71ec59b2f7652f2a644a5d7bc1fdce71ef1bd8426a4ca688a10b4e8fa1d6.js, line 6: ReferenceError: Popper is not defined
+1559473768547	Marionette	INFO	Stopped listening on port 11157
+[Parent 5732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5732, G[ecko_IOThread] CWARNING: hpipe eirlrod r: 11108908, :C fileh z:/traomsk_e15_Chi58035ldThrea249/dbu] WARiNIld/NsrcG:/ipc/ch pirpome ierrour: 10m/9:src/chrome/common/ipc_chann file z:/task_1558035249/build/src/ipc/chromium/srec/l_chwroinme.c/commoc, line 341
+n/ipc_channel_win.cc, line 341
+[Child 14416, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14416, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 5732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14456, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1558035249/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14456, Chrome_ChildThread] WARNING
