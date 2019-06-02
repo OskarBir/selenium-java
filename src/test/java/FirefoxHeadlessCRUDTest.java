@@ -273,7 +273,7 @@ public class FirefoxHeadlessCRUDTest {
         website.sendKeys("nielink");
         WebElement saveButton = driver.findElement(By.name("commit"));
         saveButton.click();
-        assertEquals("Proszę wprowadzić adres URL", website.getAttribute("validationMessage"));
+        assertEquals("Please enter a URL.", website.getAttribute("validationMessage"));
     }
 
 
