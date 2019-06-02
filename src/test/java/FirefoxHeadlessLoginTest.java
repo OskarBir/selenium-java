@@ -183,40 +183,40 @@ public class FirefoxHeadlessLoginTest {
         assertTrue(driver.getPageSource().contains("**Failed Login**"));
     }
 
-    @Test
-    public void searchOneResultOnGoogleTest() {
-        driver.get("http://google.com");
-        WebElement searchbar = driver.findElement(By.name("q"));
-        searchbar.sendKeys("inurl:What-Google-searches-only-give-one-result-at-the-time-of-writing-your-answer");
-        searchbar.sendKeys(Keys.RETURN);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.titleContains("inurl:What-Google-searches-only-give-one-result-at-the-time-of-writing-your-answer"));
-        assertTrue(driver.getPageSource().contains("This question a superset of the sport called Googlewhacking. Ironically, the moment you post the words or phrase that form a single Google"));
-    }
-
-    @Test
-    public void searchTwoResultOnGoogleTest()
-    {
-        driver.get("http://google.pl");
-        WebElement searchbar = driver.findElement(By.name("q"));
-        searchbar.sendKeys("BCICNSFD");
-        searchbar.sendKeys(Keys.RETURN);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.titleContains("BCICNSFD"));
-        assertTrue(driver.getPageSource().contains("Około 2 wyników"));
-    }
-
-    @Test
-    public void searchNotFoundResultOnGoogleTest()
-    {
-        driver.get("http://google.pl");
-        WebElement searchbar = driver.findElement(By.name("q"));
-        searchbar.sendKeys("enfoenpfonseofsofnsoenfsoenfsoenfsoenf");
-        searchbar.sendKeys(Keys.RETURN);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.titleContains("enfoenpfonseofsofnsoenfsoenfsoenfsoenf"));
-        assertTrue(driver.getPageSource().contains("Podana fraza - <em>enfoenpfonseofsofnsoenfsoenfsoenfsoenf</em> - nie została odnaleziona."));
-    }
+//    @Test
+//    public void searchOneResultOnGoogleTest() {
+//        driver.get("http://google.com");
+//        WebElement searchbar = driver.findElement(By.name("q"));
+//        searchbar.sendKeys("inurl:What-Google-searches-only-give-one-result-at-the-time-of-writing-your-answer");
+//        searchbar.sendKeys(Keys.RETURN);
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.titleContains("inurl:What-Google-searches-only-give-one-result-at-the-time-of-writing-your-answer"));
+//        assertTrue(driver.getPageSource().contains("This question a superset of the sport called Googlewhacking. Ironically, the moment you post the words or phrase that form a single Google"));
+//    }
+//
+//    @Test
+//    public void searchTwoResultOnGoogleTest()
+//    {
+//        driver.get("http://google.pl");
+//        WebElement searchbar = driver.findElement(By.name("q"));
+//        searchbar.sendKeys("BCICNSFD");
+//        searchbar.sendKeys(Keys.RETURN);
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.titleContains("BCICNSFD"));
+//        assertTrue(driver.getPageSource().contains("Około 2 wyników"));
+//    }
+//
+//    @Test
+//    public void searchNotFoundResultOnGoogleTest()
+//    {
+//        driver.get("http://google.pl");
+//        WebElement searchbar = driver.findElement(By.name("q"));
+//        searchbar.sendKeys("enfoenpfonseofsofnsoenfsoenfsoenfsoenf");
+//        searchbar.sendKeys(Keys.RETURN);
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.titleContains("enfoenpfonseofsofnsoenfsoenfsoenfsoenf"));
+//        assertTrue(driver.getPageSource().contains("Podana fraza - <em>enfoenpfonseofsofnsoenfsoenfsoenfsoenf</em> - nie została odnaleziona."));
+//    }
 
     @AfterAll
     public static void tearDown() throws Exception {
