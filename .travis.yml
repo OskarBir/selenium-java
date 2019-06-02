@@ -4,3 +4,8 @@ jdk:
 
 script:
   bash odpal.sh
+
+addons:
+  sauce_connect:
+    username: "Biru123"
+    access_key: "17cde4b6-b618-4166-94dc-4b43fbf97b09"
