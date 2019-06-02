@@ -19,6 +19,8 @@ public class FirefoxHeadlessCRUDTest {
     @BeforeAll
     public static void setUp(){
         WebDriverManager.firefoxdriver().setup();
+        System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"log.txt");
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
         driver = new FirefoxDriver(options);

@@ -18,6 +18,8 @@ public class FirefoxCRUDTest {
     @BeforeAll
     public static void setUp(){
         WebDriverManager.firefoxdriver().setup();
+        System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"log.txt");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
