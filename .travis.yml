@@ -3,4 +3,4 @@ jdk:
   -openjdk11
 
 script:
-  mvn clean test -q
+  bash odpal.sh
