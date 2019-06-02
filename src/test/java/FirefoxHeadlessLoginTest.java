@@ -37,14 +37,14 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void AddUserTitleTest()
+    public void addUserTitleTest()
     {
         driver.findElement(By.xpath("//a[@href='addauser.php']")).click();
         assertEquals("Add a user - FREE PHP code and SQL", driver.getTitle());
     }
 
     @Test
-    public void AddUserUsernameTextBoxIsPresentTest()
+    public void addUserUsernameTextBoxIsPresentTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/addauser.php");
         WebElement usernameTextBox = driver.findElement(By.name("username"));
@@ -52,7 +52,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void AddUserPasswordTextBoxIsPresentTest()
+    public void addUserPasswordTextBoxIsPresentTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/addauser.php");
         WebElement passwordTextBox = driver.findElement(By.name("password"));
@@ -60,7 +60,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void AddUserSaveButtonIsPresentTest()
+    public void addUserSaveButtonIsPresentTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/addauser.php");
         WebElement saveButton = driver.findElement(By.name("FormsButton2"));
@@ -68,21 +68,21 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void LoginTitleTest()
+    public void loginTitleTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/login.php");
         assertEquals("Login example page to test the PHP MySQL online system", driver.getTitle());
     }
 
     @Test
-    public void LoginNoLoginAttempted()
+    public void loginNoLoginAttempted()
     {
         driver.navigate().to("http://thedemosite.co.uk/login.php");
         assertTrue(driver.getPageSource().contains("**No login attempted**"));
     }
 
     @Test
-    public void LoginUsernameTextBoxIsPresentTest()
+    public void loginUsernameTextBoxIsPresentTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/login.php");
         WebElement usernameTextBox = driver.findElement(By.name("username"));
@@ -90,7 +90,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void LoginPasswordTextBoxIsPresentTest()
+    public void loginPasswordTextBoxIsPresentTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/login.php");
         WebElement passwordTextBox = driver.findElement(By.name("password"));
@@ -98,7 +98,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void LoginTestLoginButtonIsPresentTest()
+    public void loginTestLoginButtonIsPresentTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/login.php");
         WebElement saveButton = driver.findElement(By.name("FormsButton2"));
@@ -106,7 +106,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void AddUserUsernameTooShortTest()
+    public void addUserUsernameTooShortTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/addauser.php");
         WebElement usernameTextBox = driver.findElement(By.name("username"));
@@ -122,7 +122,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void AddUserPasswordTooShortTest()
+    public void addUserPasswordTooShortTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/addauser.php");
         WebElement usernameTextBox = driver.findElement(By.name("username"));
@@ -138,7 +138,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void AddUserTest()
+    public void addUserTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/addauser.php");
         WebElement usernameTextBox = driver.findElement(By.name("username"));
@@ -151,7 +151,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void LoginTest()
+    public void loginTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/addauser.php");
         WebElement usernameTextBox = driver.findElement(By.name("username"));
@@ -171,7 +171,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void FailedLoginTest()
+    public void failedLoginTest()
     {
         driver.navigate().to("http://thedemosite.co.uk/login.php");
         WebElement usernameTextBoxLogin = driver.findElement(By.name("username"));
@@ -184,7 +184,7 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void SearchOneResultOnGoogleTest() {
+    public void searchOneResultOnGoogleTest() {
         driver.get("http://google.com");
         WebElement searchbar = driver.findElement(By.name("q"));
         searchbar.sendKeys("inurl:What-Google-searches-only-give-one-result-at-the-time-of-writing-your-answer");
@@ -195,9 +195,9 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void SearchTwoResultOnGoogleTest()
+    public void searchTwoResultOnGoogleTest()
     {
-        driver.get("http://google.com");
+        driver.get("http://google.pl");
         WebElement searchbar = driver.findElement(By.name("q"));
         searchbar.sendKeys("BCICNSFD");
         searchbar.sendKeys(Keys.RETURN);
@@ -207,9 +207,9 @@ public class FirefoxHeadlessLoginTest {
     }
 
     @Test
-    public void SearchNotFoundResultOnGoogleTest()
+    public void searchNotFoundResultOnGoogleTest()
     {
-        driver.get("http://google.com");
+        driver.get("http://google.pl");
         WebElement searchbar = driver.findElement(By.name("q"));
         searchbar.sendKeys("enfoenpfonseofsofnsoenfsoenfsoenfsoenf");
         searchbar.sendKeys(Keys.RETURN);

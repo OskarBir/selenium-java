@@ -39,14 +39,14 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AddressesTitlePageTest()
+    public void addressesTitlePageTest()
     {
         driver.navigate().to("http://a.testaddressbook.com/addresses");
         assertEquals("Address Book", driver.getTitle());
     }
 
     @Test
-    public void NewAddressTest()
+    public void newAddressTest()
     {
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
         WebElement firstName = driver.findElement(By.id("address_first_name"));
@@ -85,7 +85,7 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void FirstNameLastNameAddressCityZipCodeBlankTest(){
+    public void firstNameLastNameAddressCityZipCodeBlankTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
         WebElement saveButton = driver.findElement(By.name("commit"));
         saveButton.click();
@@ -99,7 +99,7 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void FirstNameNotBlankTest(){
+    public void firstNameNotBlankTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
         WebElement saveButton = driver.findElement(By.name("commit"));
         WebElement firstName = driver.findElement(By.id("address_first_name"));
@@ -110,7 +110,7 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void LastNameNotBlankTest(){
+    public void lastNameNotBlankTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
         WebElement saveButton = driver.findElement(By.name("commit"));
         WebElement lastName = driver.findElement(By.id("address_last_name"));
@@ -122,7 +122,7 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AdressNotBlankTest(){
+    public void addressNotBlankTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
         WebElement saveButton = driver.findElement(By.name("commit"));
         WebElement address = driver.findElement(By.id("address_street_address"));
@@ -134,7 +134,7 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void CityNotBlankTest(){
+    public void cityNotBlankTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
         WebElement saveButton = driver.findElement(By.name("commit"));
         WebElement city = driver.findElement(By.id("address_city"));
@@ -146,7 +146,7 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void ZipcodeNotBlankTest(){
+    public void zipcodeNotBlankTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
         WebElement saveButton = driver.findElement(By.name("commit"));
         WebElement zipcode = driver.findElement(By.id("address_zip_code"));
@@ -158,9 +158,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AddCorrectStateTest(){
+    public void addCorrectStateTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement saveButton = driver.findElement(By.name("commit"));
         Select state = new Select(driver.findElement(By.id("address_state")));
         state.selectByVisibleText("Hawaii");
@@ -171,9 +171,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void EditStateTest(){
+    public void editStateTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement saveButton = driver.findElement(By.name("commit"));
         Select state = new Select(driver.findElement(By.id("address_state")));
         state.selectByVisibleText("Hawaii");
@@ -189,9 +189,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AddCorrectCountryTest(){
+    public void addCorrectCountryTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement countryUs = driver.findElement(By.id("address_country_us"));
         WebElement countryCa = driver.findElement(By.id("address_country_canada"));
         countryUs.click();
@@ -204,9 +204,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void EditCountryTest(){
+    public void editCountryTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement countryCa = driver.findElement(By.id("address_country_canada"));
         countryCa.click();
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -221,9 +221,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AddColorTest(){
+    public void addColorTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         JavascriptExecutor jse=(JavascriptExecutor)driver;
         jse.executeScript("document.getElementById('address_color').value='#19d826'");
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -233,9 +233,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AddCorrectWebsiteTest(){
+    public void addCorrectWebsiteTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement website = driver.findElement(By.id("address_website"));
         website.sendKeys("http://wykop.pl");
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -245,9 +245,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void EditWebsiteTest(){
+    public void editWebsiteTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement website = driver.findElement(By.id("address_website"));
         website.sendKeys("http://wykop.pl");
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -263,9 +263,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void WrongWebsiteTest(){
+    public void wrongWebsiteTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement website = driver.findElement(By.id("address_website"));
         website.sendKeys("nielink");
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -275,9 +275,9 @@ public class FirefoxCRUDTest {
 
 
     @Test
-    public void AddClimbingTest(){
+    public void addClimbingTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement interestClimb = driver.findElement(By.id("address_interest_climb"));
         interestClimb.click();
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -287,9 +287,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void EditClimbingTest(){
+    public void editClimbingTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement interestClimb = driver.findElement(By.id("address_interest_climb"));
         interestClimb.click();
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -304,9 +304,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AddDancingTest(){
+    public void addDancingTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement interestDance = driver.findElement(By.id("address_interest_dance"));
         interestDance.click();
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -317,9 +317,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void EditDancingTest(){
+    public void editDancingTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement interestDance = driver.findElement(By.id("address_interest_dance"));
         interestDance.click();
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -334,9 +334,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void AddReadingTest(){
+    public void addReadingTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement interestRead= driver.findElement(By.id("address_interest_read"));
         interestRead.click();
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -346,9 +346,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void EditReadingTest(){
+    public void editReadingTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement interestRead= driver.findElement(By.id("address_interest_read"));
         interestRead.click();
         WebElement saveButton = driver.findElement(By.name("commit"));
@@ -363,9 +363,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void DeleteAddressTest() {
+    public void deleteAddressTest() {
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement saveButton = driver.findElement(By.name("commit"));
         saveButton.click();
         driver.findElement(By.xpath("//a[@data-test='list']")).click();
@@ -378,9 +378,9 @@ public class FirefoxCRUDTest {
     }
 
     @Test
-    public void CancelDeleteAddressTest(){
+    public void cancelDeleteAddressTest(){
         driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-        CreateBasicAddress();
+        createBasicAddress();
         WebElement saveButton = driver.findElement(By.name("commit"));
         saveButton.click();
         driver.findElement(By.xpath("//a[@data-test='list']")).click();
@@ -392,9 +392,9 @@ public class FirefoxCRUDTest {
     }
 
 //    @Test
-//    public void AddPicTest(){
+//    public void addPicTest(){
 //        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-//        CreateBasicAddress();
+//        createBasicAddress();
 //        WebElement addPic = driver.findElement(By.id("address_picture"));
 //        addPic.sendKeys("C:\\Users\\Oskar\\Desktop\\projekt3-OskarBir\\zdj.jpg");
 //        WebElement saveButton = driver.findElement(By.name("commit"));
@@ -402,7 +402,7 @@ public class FirefoxCRUDTest {
 //        assertTrue(driver.getPageSource().contains("Address was successfully created."));
 //    }
 
-    public static void CreateBasicAddress(){
+    public static void createBasicAddress(){
         WebElement firstName = driver.findElement(By.id("address_first_name"));
         WebElement lastName = driver.findElement(By.id("address_last_name"));
         WebElement address = driver.findElement(By.id("address_street_address"));
@@ -416,7 +416,7 @@ public class FirefoxCRUDTest {
     }
 
     @AfterEach
-    public void LogOut(){
+    public void logOut(){
         driver.findElement(By.xpath(".//a[contains(@href,'/sign_out')]")).click();
     }
 
