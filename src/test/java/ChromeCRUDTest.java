@@ -385,16 +385,16 @@ public class ChromeCRUDTest {
         assertFalse(driver.getPageSource().contains("Address was successfully destroyed."));
     }
 
-//    @Test
-//    public void addPicTest(){
-//        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
-//        createBasicAddress();
-//        WebElement addPic = driver.findElement(By.id("address_picture"));
-//        addPic.sendKeys("C:\\Users\\Oskar\\Desktop\\projekt3-OskarBir\\zdj.jpg");
-//        WebElement saveButton = driver.findElement(By.name("commit"));
-//        saveButton.click();
-//        assertTrue(driver.getPageSource().contains("Address was successfully created."));
-//    }
+    @Test
+    public void addPicTest(){
+        driver.navigate().to("http://a.testaddressbook.com/addresses/new");
+        createBasicAddress();
+        WebElement addPic = driver.findElement(By.id("address_picture"));
+        addPic.sendKeys("C:\\Users\\Oskar\\Desktop\\projekt3-OskarBir\\zdj.jpg");
+        WebElement saveButton = driver.findElement(By.name("commit"));
+        saveButton.click();
+        assertTrue(driver.getPageSource().contains("Address was successfully created."));
+    }
 
     public static void createBasicAddress(){
         WebElement firstName = driver.findElement(By.id("address_first_name"));

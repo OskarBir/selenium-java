@@ -2,6 +2,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -13,16 +14,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FirefoxCRUDTest {
+public class IECRUDTest {
 
     private static WebDriver driver;
 
     @BeforeAll
     public static void setUp(){
-        WebDriverManager.firefoxdriver().setup();
-        System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
-        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"log.txt");
-        driver = new FirefoxDriver();
+        WebDriverManager.iedriver().setup();
+        driver = new InternetExplorerDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -229,7 +228,7 @@ public class FirefoxCRUDTest {
         WebElement saveButton = driver.findElement(By.name("commit"));
         saveButton.click();
         WebElement field = driver.findElement(By.xpath("//span[@data-test='color']"));
-        assertEquals(Color.fromString("#19d826").asRgb(), field.getCssValue("background-color"));
+        assertEquals(Color.fromString("#19d826").asRgba(), field.getCssValue("background-color"));
     }
 
     @Test
@@ -270,7 +269,7 @@ public class FirefoxCRUDTest {
         website.sendKeys("nielink");
         WebElement saveButton = driver.findElement(By.name("commit"));
         saveButton.click();
-        assertEquals("Proszę wprowadzić adres URL", website.getAttribute("validationMessage"));
+        assertEquals("Należy wpisać poprawny adres URL", website.getAttribute("validationMessage"));
     }
 
 
